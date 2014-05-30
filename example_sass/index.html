@@ -1,0 +1,51 @@
+<!doctype html>
+<html ng-app="fileApp">
+<head>
+    <meta charset="utf-8">
+    <title>Files</title>
+    <link rel="stylesheet" href="libs/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="libs/js/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="FileListCtrl">
+Search: <input ng-model="query">
+<table class="table table-bordered" width="500">
+    <thead>
+    <tr>
+        <th><a href="" ng-click="predicate = 'name'; reverse=!reverse">Name</a>
+        <th>Size</th>
+        <th><a href="" ng-click="predicate = 'uplby'; reverse=!reverse">Uploaded By</a></th>
+        <th><a href="" ng-click="predicate = 'uplon'; reverse=!reverse">Uploaded On</a></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="file in files | orderBy:predicate:reverse" ng-click="selectFile(file)"
+        ng-class='{selected: file==originalFile}'>
+        <td ng-if=" rename && file==originalFile"><input size="30" type="text" ng-model="fileName"
+                                                         ng-enter="doEnter(fileName)" ng-esc="doEsc()"/></td>
+        <td ng-if="file!=originalFile || !rename">{{file.name}}</td>
+        <td>{{file.size}}</td>
+        <td>{{file.uplby}}</td>
+        <td>{{file.uplon}}</td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <input value="" type="text" placeholder="File Name" ng-model="fileName">
+    <button ng-click="addItem(fileName)">
+        Add File
+    </button>
+</div>
+<div ng-show="originalFile">
+    <button ng-click="renameItem(originalFile)">
+        Rename File
+    </button>
+
+    <button ng-click="deleteItem(originalFile)">
+        Delete File
+    </button>
+</div>
+
+</body>
+</html>

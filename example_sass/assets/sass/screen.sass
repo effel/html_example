@@ -1,0 +1,1124 @@
+@import compass
+@import reset
+@import mixins
+
+.clearfix:after
+  clear: both
+  display: table
+  content: ""
+a 
+  color: $link-color
+  text-decoration: none
+  &:hover
+    color: $link-hover-color
+h2
+  color: $grey-color-header
+  font-size: 22px
+  font-weight: bold  
+
+body
+  color: $grey-color
+  font-size: $font-size
+  font-family: $font-family
+
+input[type="checkbox"] 
+  margin: 0  
+
+
+/*helpers*/
+
+[class*="meessgesNotification"]
+  position: absolute
+  top: 39px
+  left: 394px
+  padding: 13px 20px
+  +border-radius(8px)
+  &.success
+    color: #74bb80
+    border: 2px solid rgba(116,187,128,.5) 
+    background-color: #f1f7de
+  &.error
+    color: #e74b17
+    border: 2px solid rgba(231,75,23,.5) 
+    background-color: #fcdfd5  
+  &.warning
+    color: #fe8339
+    border: 2px solid rgba(255,192,0,.5) 
+    background-color: #fdfde9  
+  &.general
+    color: #18496d     
+    border: 2px solid rgba(24,73,109,.5)
+    background-color: #ccf4ff
+.status
+  padding: 2px 8px
+  color: #33a7a9
+  background: #e6f4f5
+  border: 2px solid #33a7a9
+  +border-radius(6px)
+  &.disabled
+    color: #a8acb3
+    background: #f9f9f9
+    border: 2px solid #a8acb3
+
+.type-provider 
+  color: $providerType
+  font-weight: bold
+.type-standart
+  color: $standartType  
+  font-weight: bold
+.right_side
+  position: absolute
+  right: 0
+  top: 30px
+  border: none
+  background: $grey-color-lighter
+.tree
+  font-size: $font-size
+  color: $grey-color-dark
+  background: $grey-color-lighter
+  ul 
+    ul
+      margin: 0 0 0 2px
+      
+    li
+      overflow: hidden
+      position: relative
+      padding: 7px 0 7px 9px
+      white-space: nowrap
+      text-overflow: ellipsis
+      width: 95%
+      &.active
+        color: $grey-color
+        font-weight: bold
+      &.open:before
+        position: absolute
+        top: 12px
+        left: 0
+        display: inline-block
+        +sprite-image(ic-tree-open)   
+        content: ""
+        margin-right: 5px
+      &.close:before
+        position: absolute
+        top: 12px    
+        left: 0  
+        display: inline-block
+        +sprite-image(ic-tree-close) 
+        content: ""
+        margin-right: 2px
+.tbl-datas
+  width: 100%
+  tr
+    td:nth-child(2)
+      color: $grey-color
+      input[type="text"]
+        width: 80%
+    th
+      padding: 25px 7px 12px 7px
+      text-align: left 
+      background: $headerTableback
+      label
+        color: #fff      
+        font-size: $font-size
+      &.sort
+        label
+          position: relative
+          padding: 0 19px 0 0
+          cursor: pointer
+          &:after 
+            position: absolute
+            right: 0
+            top: 9px
+            height: 1px
+            border: 4px solid transparent
+            border-top: 4px solid #deedc8
+            content: ""
+        &.down
+          label
+            &:after 
+              top: 3px
+              border: 4px solid transparent
+              border-bottom: 4px solid #deedc8
+              content: "" 4px solid $grey-color
+              content: ""
+    td
+      padding: 12px 7px 12px 7px
+      border-bottom: 1px solid #fff
+      color: $grey-color-light
+      vertical-align: middle
+      [class^="format"] 
+        display: inline-block
+        margin: 0 10px 0 0
+        vertical-align: middle
+      .format-doc
+        +sprite-image(ic-doc)  
+      .format-exc
+        +sprite-image(ic-excel)  
+      .format-ppt
+        +sprite-image(ic-ppt)   
+      .btn-red
+        color: #fff 
+   
+    .show_but
+      visibility: hidden  
+    .textVal
+      display: inline-block
+      width: 235px
+      overflow: hidden
+      text-overflow: ellipsis  
+      vertical-align: middle
+      height: 1.2em
+      white-space: nowrap          
+    &.selected
+      td
+        background: $grey-color-lighter
+        border-bottom: 1px solid $grey-color-lighter
+        .textVal
+          font-weight: bold
+    &:hover
+      td
+      @extend .selected
+
+  .btnedit-action
+    display: none
+    text-align: left
+    border-top: 1px solid #ccc
+    td
+      padding: 25px 7px 25px 19px
+      text-align: left
+      border-top: 1px solid #ccc
+      .btn-red
+        margin: 0 0 0 40px
+    &.visible
+      display: table-row 
+    button
+      margin: 0 5px 0 0 
+.btnright-wr
+  float: right   
+  display: none      
+.search_block
+  position: relative
+  display: inline-block
+  padding: 0 97px 0 0
+  &:before
+    z-index: 9998
+    content: ""
+    display: block
+    position: absolute
+    top: 13px
+    left: 12px
+    +sprite-image(ic-search)  
+  input[type="text"]
+    position: relative
+    width: 384px
+    height: 44px
+    line-height: 44px
+    padding: 0 0 0 35px
+
+  button
+    position: absolute
+    right: 0
+    top: 0
+    height: 46px
+    width: 103px
+    text-align: center
+    border-left: none
+    +border-radius(4px)
+button    
+  position: relative
+  display: inline-block
+  &.save
+    padding-left: 36px
+  &.save:before
+    position: absolute
+    left: 13px
+    top: 9px
+    display: inline-block
+    content: ""
+    +sprite-image(ic-save)    
+
+.clear
+  clear: both
+
+[class*="btn-"]
+  text-align: center
+  padding: 7px 18px
+  font-size: 1rem
+  font-weight: bold 
+  +border-radius(6px)
+  +background-clip(padding-box)
+  cursor: pointer 
+  font-family: $font-family
+  &:hover
+    color: #fff
+
+.btn-green
+  color: #fff
+  border: 1px solid #74bb7f
+  background-color: #74bb7f
+  +box-shadow(0 2px 0 #68a572) 
+  +text-shadow(0 1px 1px rgba(0,0,0,.2))
+  &:hover
+    background: #68a572
+    border-color: #68a572
+.btn-blue
+  color: #fff
+  border: 1px solid #2d71a3
+  background-color: #2d71a3
+  +box-shadow(0 2px 0 #17496d) 
+  +text-shadow(0 1px 1px rgba(0,0,0,.2))
+  &:hover
+    background: #18496d
+    border-color: #18496d  
+.btn-grey
+  color: #2d3139
+  background: #d8dbe0
+  border: 1px solid #d8dbe0
+  +box-shadow(0 2px 0 #b4b6b9) 
+  &:hover
+    color: #2d3139  
+    background: #b4b6b9
+    border-color: #b4b6b9    
+.btn-warning
+  color: #fff
+  background-color: #ee683c
+  border: 1px solid #ee683c
+  +box-shadow(0 2px 0 #9d2f0a) 
+  &:hover
+    background: #d3552b  
+    border-color: #d3552b     
+.btn-upload
+  color: #fff
+  border: 1px solid #0da8a6 
+  +box-shadow(0 2px 0 #478787)
+  background-color: #0da7a5 
+  input[type="file"]
+    position: absolute
+    left: 0
+    width: 212px
+    height: 46px
+    cursor: pointer
+    opacity: 0
+  &:hover
+    background: #488888   
+    border-color: #488888     
+.btnsmall
+  position: relative
+  display: inline-block
+  width: 35px
+  height: 35px
+  padding: 0  
+  &:before
+    position: absolute
+    display: inline-block
+    content: ""
+.field_style
+  padding: 8px 0 8px 9px
+  color: #737373
+  font-size: 1rem
+  border: 2px solid $grey-color-decor
+  +border-radius(4px)
+  +background-clip(padding-box)
+  background-color: #fff
+  &:focus
+    +box-shadow(inset 0 0 6px $grey-color-decor) 
+    placeholder
+      color: $grey-light 
+
+input[type="text"]
+  @extend .field_style
+
+input[type="password"]
+  @extend .field_style
+
+//input[type="checkbox"] 
+    display: none
+
+//input[type="checkbox"] + label:before
+    display: inline-block
+    content: ""
+    +sprite-image(bg_check)  
+//input[type="checkbox"]:checked + label:before
+    +sprite-image(bg_check_active)         
+
+select  
+  @extend .field_style
+  padding: 8px 9px 
+
+.brd-radius-block 
+  padding: 20px
+  border: 2px solid $grey-color-decor
+  +border-radius(4px) 
+
+.view      
+  position: relative
+  padding-left: 35px
+  vertical-align: top  
+  &:before
+    position: absolute
+    left: 11px
+    top: 8px
+    display: block
+    content: ''
+    +sprite-image(ic-view)   
+.setFolder
+  width: 100%
+
+.all 
+  position: relative
+  height: 100%
+  margin: 0 auto
+
+.upload
+  position: relative
+  &:before
+    position: absolute 
+    left: 51px
+    top: 14px
+    +sprite-image(ic-upload) 
+    content: ""  
+.ic-create-folder
+  display: inline-block
+  margin: 0 3px 0 0
+  +sprite-image(ic-create-folder)
+  vertical-align: middle  
+.edit
+  +border-radius(6px)
+  @extend .btn-green
+  @extend .btnsmall
+  &:before
+    top: 9px
+    left: 8px
+    +sprite-image(penwhite)     
+
+/*Header*/
+header
+  height: 107px
+  background-color: $grey-color-lighter
+  +box-shadow(0 0 4px rgba(0,0,0,.3))
+  &:before
+    position: absolute
+    top: 0
+    left: 0
+    display: block
+    +sprite-image(bg_header)    
+    content: ""   
+  section
+    position: relative    
+    width: $sectionWidth
+    margin: 0 auto
+    font-size: $font-size-small
+    a
+      font-size: $font-size-small
+      font-weight: bold    
+  .logo
+    position: absolute
+    top: 47px
+    display: block
+    +sprite-image(logo)
+  .left_nav
+    position: absolute
+    left: 216px
+    top: 62px
+    li
+      display: inline-block
+      margin: 0 18px 0 0
+      a
+        color: #000
+        text-transform: uppercase
+        &:hover
+          text-decoration: underline
+  .nick_name 
+    position: absolute  
+    top: 44px
+    padding: 13px 21px 13px 43px
+    right: 0px 
+    border: 2px solid $grey-color-lighter
+    +border-radius(4px)       
+    &.visible
+      background: #fff
+      border: 2px solid $grey-color-decor
+      +border-radius(4px)   
+    a
+      font-size: 16px
+    &.drop:after
+      content: ""
+      display: block
+      position: absolute
+      right: 6px
+      top: 19px
+      +sprite-image(ic-drop-down)   
+    &.drop.visible
+      .dropdown
+        display: block
+      &:after    
+        +sprite-image(ic-drop-up)
+
+.dropdown 
+  display: none
+  z-index: 9999
+  position: absolute
+  left: 50%
+  margin: 0 0 0 -74px
+  top: 43px
+  bottom: 0
+  width: 148px
+  font-size: $font-size-small
+  .log-out
+    position: relative   
+    padding: 0 22px 0 29px
+    &:before
+      position: absolute
+      left: 6px
+      top: 1px 
+      content: ""
+      +sprite-image(ic-log-out)
+    &:hover:before
+      +sprite-image(ic-log-out_hover)       
+  ul
+    padding: 12px 0 16px
+    background: $headerColor  
+    border: 2px solid $grey-color-decor
+    +border-radius(0 0 4px 4px)   
+    +box-shadow(0 0 0 $grey-color-decor)   
+    li
+      padding: 16px 0 0px
+      text-align: right    
+      a
+        padding: 0 22px 0 0
+
+/*Login*/ 
+.login 
+  width: 449px
+  margin: 40px auto 0 
+  h2
+    margin: 0 0 22px
+  label
+    display: inline-block 
+    width: 119px
+    margin: 0 8px 0 0   
+  input[type="text"],
+  input[type="password"]
+    display: inline-block
+    width: 200px
+  .forgot-pass  
+    float: right 
+  .item
+    display: inline-block
+    width: 100%
+    margin: 0 0 20px
+  .log
+    float: left
+    margin: 0 0 0 132px
+
+/*content*/
+.content
+  position: relative    
+  width: $sectionWidth
+  margin: 0 auto  
+
+
+/*Registration*/
+.block-reg
+  position: relative
+  width: $sectionWidthSmall
+  margin: 0 auto
+  padding: 107px 0 0
+
+  .history
+    position: absolute
+    top: 51px
+
+  article
+    float: left
+    margin: 0 0 30px  
+
+    figure
+      display: inline-block
+      width: 141px
+      text-align: center
+      &.num
+        color: #37a1b6
+        .pic
+          +sprite-image(ic-reg-num)
+        mark
+          color: #37a1b6      
+      &.weight      
+        color: #e0b764
+        .pic
+          +sprite-image(ic-reg-weight)      
+        mark
+          color: #e0b764      
+      &.space
+        color: #eb766c
+        .pic
+          +sprite-image(ic-reg-space)       
+        mark
+          color: #eb766c             
+      .pic
+        display: inline-block
+        margin:  0 0 14px
+      figurecaption
+        display: inline-block
+        font-size: $font-size-small      
+        mark
+          display: inline-block
+          width: 100%
+          padding: 10px 0 0
+          font-size: 24px
+          font-weight: bold 
+          background-color: transparent
+  .reg-list
+    float: right
+    margin: 0 0 30px
+    li
+      margin: 16px 0 0
+      font-style: italic
+      &:before
+        display: inline-block
+        vertical-align: middle
+        padding: 0 10px 0 0
+        content: ""
+        +sprite-image(ic-reg-list)
+  .reg-form
+    clear: both
+    width: 100%
+    > div
+      display: inline-block
+      width: 47%
+      vertical-align: top
+      &.one
+        p
+          padding: 10px 131px 0 23px
+          color: $grey-color-header
+          font-size: $font-size-smaller
+      &.two
+        label
+          width: 190px
+    h2
+      margin: 0 0 40px  
+
+    .item
+      display: inline-block
+      width: 100%
+      margin: 0 0 20px
+      label
+        display: inline-block 
+        width: 119px
+        margin: 0 8px 0 0 
+        color: $grey-color-light  
+      input[type="text"],
+      input[type="password"]
+        display: inline-block
+        width: 200px
+    .reg
+      float: right
+
+.reg-confirm
+  width: 449px
+  margin: 40px auto 0 
+  text-align: center
+  h2
+    margin: 0 0 22px
+    text-align: left
+  p
+    padding: 0 0 5px
+    text-align: left
+  .btn-green
+    display: inline-block 
+    min-width: 100px
+    margin: 10px 0 0
+
+/*Dashboard and Collaboration*/
+.dashboard, .collabaration
+  display: table
+  padding: 110px 0 0
+  border-bottom: 1px solid $grey-light
+  position: relative
+  > div[class^="side"]
+    vertical-align: top
+    border-top: 1px solid $grey-light
+.side_one
+  display: table-cell
+  width: $sideOneWidth
+  padding: 20px 0 22px 20px
+  background: $grey-color-lighter    
+  border-right: 1px solid $grey-light    
+  .add-folder
+    position: relative
+    left: 0
+
+.side_two
+  display: table-cell
+  border: none
+
+.side_th
+  display: table-cell
+  width: 167px
+  padding: 20px 0 22px 20px
+  background: $grey-color-lighter      
+  border-left: 1px solid $grey-light    
+  h5
+    margin: 0 0 15px
+  .but-wrap
+    @extend .clearfix
+    > a
+      display: inline-block
+      padding-top: 0
+      padding-bottom:  0
+      height: 35px
+      line-height: 35px
+      vertical-align: top
+    .edit
+      vertical-align: top 
+  .action_btn, .but-wrap
+    display: inline-block
+    li 
+      display: inline-block
+    a
+      position: relative
+      display: inline-block
+      &:before
+        position: absolute
+        display: inline-block
+        content: ""
+      &.move:before
+        top: 9px
+        left: 9px
+        +sprite-image(ic-move) 
+      &.copy:before
+        top: 7px
+        left: 9px          
+        +sprite-image(ic-copy)
+      &.del:before
+        top: 9px
+        left: 9px
+        +sprite-image(ic-del)
+  [class^="fileUpdate"]
+    position: relative
+    overflow: hidden
+    min-height: 80px
+    @extend .clearfix
+    &:before
+      float: left
+      margin: 0 15px 0 0 
+      content: ""
+    &.fileUpdate-folder:before  
+      +sprite-image(ic-create-folder-big)
+    &.fileUpdate-doc:before 
+      +sprite-image(ic-doc-big)     
+    &.fileUpdate-doc:before  
+      +sprite-image(ic-doc-big)   
+    &.fileUpdate-ppt:before  
+      +sprite-image(ic-ppt-big)           
+       
+    h5
+      margin: 0 0 10px
+    p
+      color: $grey-color-light     
+          
+
+  &.large
+    width: $sideTwoBigWidth - 20px            
+
+  h3 
+    margin: 0 0 10px
+    color: $grey-color-light
+    font-size: $font-size
+  h4 
+    margin: 0 0 10px
+    color: $grey-color-lighter
+    font-size: $font-size      
+.upload
+  position: absolute
+  display: inline-block
+  top: 38px
+  left: 0px
+  height: 46px
+  line-height: 46px
+  padding: 0 50px 0 84px  
+  margin: 0 15px 0 0  
+.add-folder
+  position: absolute
+  top: 41px
+  left: 221px
+  padding: 7px 18px 7px 40px
+  color: #fff
+  background: #47b38e
+  border: 1px solid #47b38e
+  +box-shadow(0 2px 0 #40a17f) 
+  @extend [class*="btn-"]
+  &:hover
+    background: #40a180
+    border: 1px solid #40a180
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    left: 17px
+    top: 8px
+    +sprite-image(ic-add-folder)
+.dashboard
+  .tbl-datas
+    tr
+      td:nth-child(1)
+        text-align: center 
+      td:nth-child(2)  
+        color: $grey-color 
+
+.wrapperbtn
+  text-align: left
+  [class*="btn-"]
+    position: relative
+    &:before
+      position: absolute
+      display: block
+      content: ""
+      top: 10px
+      left: 8px
+  .restore
+    &:before
+      +sprite-image(ic-restore)    
+  .download
+    &:before
+      +sprite-image(ic-download)                    
+  .history
+    &:before
+      +sprite-image(ic-history)   
+  .del
+    &:before
+      +sprite-image(ic-del)   
+.wrapperbtn-right
+  text-align: left
+  padding-left: 0 
+  .view
+    height: 35px
+  .edit-user      
+    &:before
+      left: 6px
+      top: 6px
+      +sprite-image(ic-user-det)           
+  .edit-perm     
+    &:before
+      left: 6px
+      top: 6px    
+      +sprite-image(ic-edit-perm) 
+  .edit-pass    
+    &:before
+      +sprite-image(ic-reset-pass)       
+
+/*Admin page*/
+.accountadmin
+  aside
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    width: 160px
+    padding: 61px 0 0
+    font-size: $font-size
+    border: 2px solid $grey-color-decor
+    border-width: 0 2px
+    h2
+      font-size: $font-size-small
+      color: $grey-color
+      font-weight: normal
+      margin: 0 0 12px 12px
+    ul
+      margin: 0 0 12px
+      li
+        padding: 12px 0
+        border-top: 2px solid $grey-color-decor
+        &:first-child
+          border: none
+        a
+          padding: 0 0 0 12px 
+        label
+          padding: 0 0 0 12px
+        &.active a
+          color: $grey-color
+    .link_to_dash
+      padding: 0 0 0 12px 
+  &.users
+    padding: 34px 0 0
+    h2
+      position: relative
+      margin: 0 0 30px
+      padding: 6px 0 0
+      .user_list
+        position: absolute
+        left: 128px
+        top: 0
+      .field-wrap
+        display: none
+        position: absolute
+        left: 128px
+        right: 0
+        top: 0            
+        .name
+          width: 12%
+        .email
+          width: 20%
+          margin: 0 5px
+        select
+          width: 108px
+          margin: 0 5px 0 0  
+        > 
+          display: inline-block           
+
+  .aside_two
+    position: relative
+    margin: 0 0 0 211px
+    .aside_two_wr
+      display: table 
+      width: 100%    
+      [class^="side_"]  
+        border: 1px solid $grey-light 
+        border-width: 1px 0 
+      .side_th
+        border-left: 1px solid $grey-light          
+    &.full
+      margin: 0
+    .brd-radius-block
+      overflow: hidden
+      display: inline-block
+      margin: 52px 0 0
+      width: 42% 
+      min-height: 675px
+      vertical-align: top
+      h2
+        position: relative
+        margin: 0 0 50px
+        .edit
+          position: absolute
+          left: 48%
+      .item
+        float: left
+        width: 100%
+        margin: 15px 0
+        > div
+          position: relative
+          display: inline-block
+          width: 48% 
+          vertical-align: middle
+        label
+          color: $grey-color-dark
+        .green
+          color: $green-color 
+        .change_pass
+          position: absolute
+          right: 0
+          padding: 0 0 0 25px
+          &:before
+            position:  absolute
+            left: 0
+            content: ""  
+            +sprite-image(penblue)
+          &:hover:before
+            +sprite-image(penblue_hover)  
+        input[type="text"]
+          display: none
+          width: 98%    
+      &:nth-child(2)
+        float: right
+      .but_edit_wrap
+        display: none
+        position: absolute
+        left: 48% 
+        top: 0
+        button
+          display: inline-block
+          position: relative
+
+.admin
+  .selected td
+    vertical-align: top
+.setFolder
+  padding: 16px 0 0
+  input[type="checkbox"]
+    display: inline-block
+    margin: 0 7px 0 0    
+.set-folder-wr
+  display: none
+  .items
+    padding: 5px 0
+    &:first-child
+      padding: 26px 0 5px
+  label
+    display: inline-block
+    color: $grey-light
+    &:first-of-type
+      margin: 0 40px 0 0
+
+/*Upload page*/
+.uploadWr
+  padding: 77px 0 0
+  h2
+    margin: 0 0 35px
+  .uploadFile
+    @extend .clearfix  
+    .upload_file_inp
+      position: relative
+      margin: 13px 0 0
+      padding: 0 0 68px
+      .fileInp
+        position: absolute
+        top: 0
+        height: 48px
+        filter: alpha(opacity=0)
+        opacity: 0
+        z-index: 999
+        width: 521px
+        cursor: pointer
+    .upload_block
+      position: absolute
+      left: 0
+      top: 0
+      z-index: 1
+      @extend .search_block 
+  .file_loader
+    padding: 0 0 30px
+    .item
+      width: 100%
+      display: inline-block
+      margin: 15px 0 0
+      vertical-align: middle
+      @extend .clearfix
+      .edit-del
+        display: inline-block
+        margin: 0 15px 0 0
+        +sprite-image(ic-cancel)
+        cursor: pointer
+      strong
+        display: inline-block
+        margin: 0 23px 0 0
+      span
+        display: inline-block
+        margin: 0 23px 0 0
+        color: $grey-color-dark                  
+      &:first-child
+        margin: 0 
+    .btnact
+      width: 424px
+      padding: 40px 0 0
+      text-align: right
+      [class*="btn-"]
+        padding: 12px 18px
+      .btn-green
+        float: left
+      .btn-upload
+        position: relative
+        top: auto
+        padding: 0 18px 0 55px
+        &:before
+          left: 23px      
+.upload-progress
+  .item
+    margin: 0 0 31px
+    &:last-child
+      margin: 0
+    h3
+      margin: 0 0 14px
+    .progress-bar
+      position: relative
+      width: 477px
+      height: 46px
+      border: 2px solid $grey-color-decor 
+      .header
+        position: absolute
+        left: 17px
+        top: 15px
+        mark
+          color: $grey-color-dark
+          background: transparent
+          padding: 0 0 0 15px
+      .result
+        position: absolute
+        right: -45px
+        top: 15px
+        color: $grey-color-dark
+        &.success
+          display: block
+          right: -32px
+          +sprite-image(ic-reg-list)
+      .cancel
+        position: absolute
+        top: 13px
+        right: 10px
+        display: block
+        +sprite-image(ic-cancel-big)
+        cursor: pointer    
+      span
+        position: absolute
+        &.status-bar
+          left: 0
+          top: 0
+          bottom: 0
+          width: auto
+          background: $yellow-color      
+
+
+/*Modal*/
+.modal-dialog
+  position: absolute
+  z-index: 9999
+  top: 253px
+  left: 50%
+  background: #fff
+  border: 2px solid $grey-light
+  .modal-header
+    position: relative
+    padding: 15px 0
+    background: $headerColor
+    .modal-title
+      font-size: 22px
+      padding: 0 0 0 27px
+    .close
+      position: absolute
+      display: block
+      right: 15px
+      top: 19px
+      +sprite-image(ic-close)
+      border: none
+      cursor: pointer 
+    .collapse
+      @extend .close
+      top: 24px      
+      +sprite-image(ic-modal-collapsed)        
+  .modal-body
+    padding: 28px 28px 14px 
+    h2
+      margin: 0 0 15px
+      color: $grey-color-dark 
+      font-size: 1rem
+      font-weight: normal
+  .modal-footer
+    padding: 14px 28px 28px       
+.upload-modal
+  width: 430px
+  margin: 0 0 0 -215px 
+  .tree
+    display: inline-block
+    padding: 20px  
+    ul li
+      padding: 7px 0 7px 13px
+.upload-modal-progress
+  width: 572px
+  .note
+    position: absolute
+    right: 82px
+    top: 17px
+    color: $grey-color-dark
+  &.hideHeight
+    overflow: hidden
+    height: 185px
+    .collapse
+      top: 19px
+      +sprite-image(ic-modal-collapse)      
+
+
+    
+
+   
+
+

@@ -1,0 +1,16 @@
+@import compass/css3
+@import variables
+ 
+=respond-to($media)
+  @media #{$media}
+    @content
+
+$sprites: sprite-map("sprites/*.png")
+
+=sprite-image($name)
+  background-image: sprite-url($sprites)
+  background-position: sprite-position($sprites, $name)
+  background-repeat: no-repeat
+  height: image-height(sprite-file($sprites, $name))
+  width: image-width(sprite-file($sprites, $name))
+

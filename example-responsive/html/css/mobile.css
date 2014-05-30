@@ -1,0 +1,51 @@
+/*for smartphones*/
+@media (max-width: 1200px) {
+  .tabs-content li {width:47%;}    
+}
+
+@media (max-width: 981px) {
+.content {padding:35px 0 210px;}
+.headerWr {width:96%;height:160px;}  
+.logo {left:50%;margin:0 0 0 -49px;background:url(../img/retina/logo.png) no-repeat;background-size:89px auto;}
+.header .nav .about ins {background-image:url(../img/retina/retina_ic_nav.png);background-size:82px auto;background-repeat:no-repeat;}
+.header .nav .about:hover ins {background-position:0 -27px;}
+.header .nav .about.selected ins {background-position:0 -27px;}
+.header .nav .portfolio ins {background-image:url(../img/retina/retina_ic_nav.png);background-size:82px auto;background-position: -26px 0;}
+.header .nav .portfolio:hover ins {background-position:-26px -27px;}
+.header .nav .portfolio.selected ins {background-position:-26px -27px;}
+.header .nav .cont ins {background-image:url(../img/retina/retina_ic_nav.png);background-size:83px auto;background-position: -55px 0;}
+.header .nav .cont:hover ins {background-position:-55px -28px;}
+.header .nav .cont.selected ins {background-position:-55px -28px;}
+
+.content {width:96%;}
+.content h1 label:before,
+.content h1 label:after {background:url(../img/retina/retina_bg_header_one.png) no-repeat;background-size:7px auto;}
+.infoTxt p {text-align:justify;}
+.intexItems {display:inline-block;width:100%;}
+.intexItems .td {display:inline-block;width:100%;}
+.intexItems .items ins {display:none;}
+.intexItems .items b {display:none;}
+.intexItems .frst .pic {background:url(../img/retina/retina_bg_index_items_pic.png) no-repeat;background-size:298px 99px;background-position:0 0 ;}
+.intexItems .sec .pic {background:url(../img/retina/retina_bg_index_items_pic.png) no-repeat;background-position:-81px 0;background-size:242px 82px;}
+.intexItems .th .pic {background:url(../img/retina/retina_bg_index_items_pic.png) no-repeat;background-position:-185px 0;background-size:242px 82px;}
+
+.one {float:none;width:100%;}
+.two {overflow:visible;width:100%;}
+.tabs-content li {width:100%;margin: 0 0 18px;}
+.tabs-content .infoTxt h2 {display:inline-block;}
+
+.footer {height:168px;margin:-168px 0 0;}
+.footer p {width:100%;text-align:center;}
+.address {top:82px;}
+.tel {top:109px;}
+}
+
+@media (max-width: 479px) {
+.header .nav li {padding: 0 15px;}  
+.tabs-catalog label {font-size: 11px;font-size:0.688rem;}  
+.tabs-catalog a {padding:0 8px 0 0;font-size: 11px;font-size:0.688rem;}
+.footerWr .nav li {padding: 8px 6px;}     
+}
+
+
+

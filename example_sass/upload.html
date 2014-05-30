@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="assets/css/print.css" media="print" rel="stylesheet" type="text/css" />
+    <script src="assets/js/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>         
+  </head>
+<body>
+  <div class="all">
+    <header>
+      <section>
+        <a href="/" class="logo"></a>
+        <ul class="left_nav">
+        	<li><a href="">Services</a></li>
+        	<li><a href="">Contact Us</a></li>
+        </ul>     
+        <div class="nick_name drop"><a href="javascript:void();">John Smith</a>
+          <div class="dropdown">
+              <ul>
+                  <li><a href="">Back to admin</a></li>
+                  <li><a href="" class="log-out">Logout</a></li>
+              </ul>
+          </div>        
+        </div>
+      </section>
+    </header><!--/header--->
+
+    <section class="content clearfix">
+      <div class="uploadWr">
+        <h2>Upload File to Archive</h2>
+        <div class="uploadFile">
+         <p>Choose files to upload to the Archive. You can select more than one file at a time. You can also drag and drop files to start the uploading.</p>  
+          <div class="upload_file_inp">
+            <input name="" type="file" class="fileInp">
+            <div class="upload_block">
+             <input type="text" placeholder="Choose File" name="">
+             <button class="btn-green">Choose</button>
+           </div>
+          </div>        
+        </div><!--/upload_file_inp--->
+        
+        <div class="file_loader">
+          <div class="item"><i class="edit-del"></i><strong>DocumentName1.pdf</strong><span>1.1 MB</span><span>Collaboration Area</span></div>
+          <div class="item"><i class="edit-del"></i><strong>DocumentName2.pdf</strong><span>2.7 MB</span><span>Period 3</span></div>
+          <div class="item"><i class="edit-del"></i><strong>DocumentName3.pdf</strong><span>4.0 MB</span><span>Period 4</span></div>
+          <div class="btnact">
+             <button class="btn-green">Add files</button>
+             <a class="upload btn-upload" href="">Upload file</a>             
+             <button class="cancel btn-grey">Cancel</button>            
+          </div>
+        </div><!--/file_loader--->
+     </div><!--/uploadWr---> 
+    </section><!--/content---> 
+<div class="modal-dialog upload-modal">
+   <div class="modal-content">
+      <div ng-show="title" class="modal-header">
+        <button class="close"></button>
+        <h4 class="modal-title">Directory</h4>
+      </div>
+    <div class="modal-body">
+      <h2>Choose the destination folder:</h2>
+      <div class="tree">
+        <ul>
+          <li class="close">Archive</li>
+          <li class="open active">Collaboration Area</li>          
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+         <button class="cancel btn-grey">Cancel</button>    
+         <button class="btn-green">Ok</button>
+     </div>
+   </div>
+</div><!--/modal-dialog--->  
+<div class="modal-dialog upload-modal-progress">
+   <div class="modal-content">
+      <div ng-show="title" class="modal-header">
+        <button class="collapse"></button>
+        <div class="note">1 file left</div>
+        <h4 class="modal-title">Progress</h4>
+      </div>
+    <div class="modal-body">
+       <div class="upload-progress">
+         <div class="item">
+         	<h3>Directory: <strong>Collaboration Area</strong></h3>
+             <div class="progress-bar">
+              <span class="status-bar" style="width: 80%;"></span>
+              <label class="header">DocumentName1.pdf    <mark>1.1 MB</mark></label>
+              <i class="cancel"></i>
+              <span class="result">80%</span>
+             </div> 
+          </div> 
+         <div class="item">
+         	<h3>Directory: <strong>Collaboration Area</strong></h3>
+             <div class="progress-bar">
+              <span class="status-bar" style="width: 80%;"></span>
+              <label class="header">DocumentName1.pdf    <mark>1.1 MB</mark></label>
+              <i class="cancel"></i>
+              <span class="result">80%</span>
+             </div> 
+         </div>     
+         <div class="item">
+         	<h3>Directory: <strong>Collaboration Area</strong></h3>
+             <div class="progress-bar">
+              <span class="status-bar" style="width: 80%;"></span>
+              <label class="header">DocumentName1.pdf    <mark>1.1 MB</mark></label>
+              <i class="cancel"></i>
+              <span class="result success"></span>
+             </div> 
+          </div>          
+       </div><!--/upload-progress--->
+    </div>
+    <div class="modal-footer">
+         <button class="cancel btn-grey">Cancel</button>    
+         <button class="btn-blue">Hide</button>
+     </div>
+   </div>
+</div><!--/modal-dialog--->     
+  </div><!--/all---> 
+
+</body>
+</html>

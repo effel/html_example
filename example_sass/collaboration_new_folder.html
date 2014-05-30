@@ -1,0 +1,134 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="assets/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="assets/css/print.css" media="print" rel="stylesheet" type="text/css" />
+    <script src="assets/js/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="assets/js/main.js" type="text/javascript"></script>         
+  </head>
+<body>
+  <div class="all">
+    <header>
+      <section>
+        <a href="/" class="logo"></a>
+        <ul class="left_nav">
+        	<li><a href="">Services</a></li>
+        	<li><a href="">Contact Us</a></li>
+        </ul>     
+        <div class="nick_name drop"><a href="javascript:void();">John Smith</a>
+          <div class="dropdown">
+              <ul>
+                  <li><a href="">Back to admin</a></li>
+                  <li><a href="" class="log-out">Logout</a></li>
+              </ul>
+          </div>        
+        </div>
+      </section>
+    </header><!--/header--->
+
+    <section class="dashboard content clearfix">
+      <button class="add-folder btn-grey">Add folder</button>
+      <div ng-controller="uploadCtrl" class="upload btn-upload ng-scope">
+        <input type="file" ng-file-select="onFileSelect($files)" name="Upload">
+        Upload file
+       </div>
+     
+      <div class="right_side">
+        <div class="search_block">
+          <input name="" type="text" placeholder="Search">
+          <button class="btn-green">Search</button>
+        </div>
+      </div>
+      <div class="side_one">
+        <div class="tree">
+        	<ul>
+        		<li class="open">Accounting
+                  <ul>
+                    <li class="open">Corporate recCorporate recCorporate rec
+                      <ul>
+                          <li class="open">2013
+                            <ul>
+                            	<li class="active">January</li>
+                                <li>February</li>
+                            </ul>
+                          </li>
+                          <li class="close">2014</li>
+                      </ul>
+                    </li>
+                  </ul>
+        		</li>
+        		<li class="close">Human Resoucrs</li>
+        		<li class="close">Collabroation Area</li>
+        	</ul>
+        </div>
+      </div>
+      <div class="side_two small-right">
+        <table class="tbl-datas">
+        	<tr>
+                <th></th>
+        		<th class="sort"><label>File Name</label></th>
+        		<th class="sort down"><label>File Size</label></th>
+        		<th><label>Uploaded by</label></th>
+        		<th><label>Uploaded on</label></th>
+        	</tr>
+            <tr> 
+                <td><input name="" type="checkbox" value="" class="show_but" /></td>
+            	<td><span class="format-doc"></span><label class="textVal">Project Environment Configuration</label></td>
+            	<td>27 КB</td>
+            	<td>Trinity Clapton</td>
+            	<td>29/03/2014, 06:09:36</td>
+            </tr>
+            <tr>
+                <td><input name="" type="checkbox" value="" class="show_but" /></td>            
+            	<td><span class="format-exc"></span><label class="textVal">Employee Clearance Checklist</label></td>
+            	<td>30 КБ</td>
+            	<td>Sophia Parkinson</td>
+            	<td>28/03/2014, 20:54:08</td>
+            </tr> 
+            <tr>
+                <td><input name="" type="checkbox" value="" class="show_but" /></td>            
+            	<td><span class="format-ppt"></span><label class="textVal">Project Environment Configuration</label></td>
+            	<td>27 КB</td>
+            	<td>Trinity Clapton</td>
+            	<td>29/03/2014, 06:09:36</td>
+            </tr>
+            <tr>
+                <td><input name="" type="checkbox" value="" class="show_but" /></td>            
+            	<td><span class="ic-create-folder"></span><input name="" type="text" placeholder="Folder name here"></td>
+            	<td>27 КB</td>
+            	<td>Trinity Clapton</td>
+            	<td>29/03/2014, 06:09:36</td>
+            </tr>
+            <tr>
+            <td><input name="" type="checkbox" value="" class="show_but" /></td>            
+            	<td><label class="textVal">Project Environment Configuration</label></td>
+            	<td>27 КB</td>
+            	<td>Trinity Clapton</td>
+            	<td>29/03/2014, 06:09:36</td>
+            </tr>                                               
+        </table>
+      </div>
+      <div class="side_th large">
+        <h4>Available 4.23 GB of 12 GB.</h4>
+        <div class="fileUpdate-ppt">
+          <h5>New folder</h5>
+          <p>Last updated: 28/03/2014</p>
+        </div>
+        <div class="but-wrap">
+            <a href="" class="view btn-green">Preview</a>      
+            <a class="edit" href=""></a>   
+            <a class="del btn-warning" href=""></a>     
+        </div>
+        </ul>
+      </div>  
+    </section>
+    
+  </div><!--/all---> 
+
+</body>
+</html>
