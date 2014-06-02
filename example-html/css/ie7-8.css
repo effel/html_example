@@ -1,0 +1,47 @@
+/* ie7 - 8 css only*/
+.helper {display:none;height: 100%;vertical-align:middle;width:1px;*display:inline;*zoom:1;}
+.dropSearch .items-wrp {*float:left;}
+.InfoDrop_wrap ul {*zoom:1;*display:inline;}
+.ItemsListWr {*position:relative;}
+.ItemsList li {width:219px;margin:0 5px 20px 0;*zoom:1;*display:inline;}
+.midArea .ItemsList li {width:219px;}  
+.ItemsList li a {*zoom:1;*display:inline;}
+.categoryList ul .ic_area {*zoom:1;*display:inline;}
+.categoryList ul label {*zoom:1;*display:inline;}
+.categoryList ul span {*zoom:1;*display:inline;}
+.sideThItems li .imgarea-wr.align-width img {*display:inline;*zoom:1;*vertical-align: middle;*width:99%;}
+.aside {*position:relative;*z-index:9999;}
+.priceSlideVal .items span {*width:72px;}
+.priceSlideVal .items input[type="text"] {width:69px;*clear:both;}
+.priceSlideVal .items.arr {*margin:32px 0 0 16px;}
+.added {*display:inline;*zoom:1;}
+.ShortcutWr ul {*display:inline;*zoom:1;}
+.midArea .ShortcutWr ul {margin:0 26px 13px 0;*margin:0 13px 13px 0;}
+.profileMenu li {*float:left;}
+.mapArea .two h2 label {*zoom:1;*display:inline;}
+.mapArea .two .linksItem {*position:relative;} 
+.content h2 {float:left;clear:both;}
+.cont-slider ul li {*zoom:1;*display:inline;}
+.productInfo .slider ul li {*zoom:1;*display:inline;}
+.ic-share a {*zoom:1;*display:inline;}
+.imgSlider ul li {*zoom:1;*display:inline;}
+.imgSlider ul li a {display:inline-block;}
+.footerMenuWrap ul {*zoom:1;*display:inline;}
+.footerNewsWrap ul {*zoom:1;*display:inline;}
+.wideItem li .infoText .bottomInf {*left:0;}
+.wideItem li .infoText p.overflow {*width:99%;}
+.tbl-colored .timeVal {width:11%;}
+.midArea .wideItem.profiles li .infoText h2 {*max-height:74px;}
+.midArea .wideItem li .details label {display:none;}
+.midArea .wideItem .rating {margin: 2px 8px 0 13px;}
+.midArea .wideItem li .ratingDet {width:26px;height:20px;overflow:hidden;}
+
+@media only screen and (max-width: 1760px) {
+  .ItemsList li {width:219px;}
+  .midArea .ItemsList li {width:219px;}
+}
+
+@media only screen and (max-width: 1465px) {
+   .ItemsList li {width:219px;}  
+   .midArea .ItemsList li {width:219px;}   
+}

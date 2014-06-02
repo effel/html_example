@@ -1,0 +1,82 @@
+/* opera mini*/
+
+.itemsInfo {padding-bottom:0;}
+.imgarea-wr {float:left;}
+
+/*Header*/
+.header .rightDrop ins {top:4px;}
+
+.nav {height:36px;}
+.nav .categoryNav > li > a {height:16px;}
+.nav .personalSelect li {height:16px;}
+.nav .personalSelect label {margin:2px 7px 0 0;}
+.nav .personalSelect .back {height:25px;margin:-3px 0 0;}
+.nav .personalSelect .personal {margin:0;}
+.nav .personalSelect .personal-out a {top:-4px;}
+
+.categoryList {overflow:hidden;width:248px;}
+.categoryList ul label {width:59%;}
+
+.side_two .slider .slideInfo .more {height:auto; padding:6px 0 6px 21px;}
+.side_two .slider .slideInfo .more ins {top:2px;}
+
+.ItemsList li .time i {top:0;}
+.ratingDet {margin:5px 0 0;}
+.right {top:20px;}
+
+.ShortcutWr .bottomLinks {clear:both;}
+.ShortcutWr .bottomLinks a i {top:4px;}
+.ShortcutWr .bottomLinks a.delivery b {top:0;}
+
+.history .arr {margin:5px 0 0;}
+
+.midArea .wideItem.profiles li .infoText h2 {overflow:visible;}
+.wideItem li .infoText .bottomInf {width:100%;}
+
+.sideThItems li {border:1px solid #DFDDD9;}
+.sideThItems li .txtInfo h2 {height:auto;padding:5px 0 4px;}
+
+.mapArea .map-tooltipWr h3 label {float:left;}
+.mapArea .two h2 i {top:12px;}
+.page {float:left;}
+
+.paging a {height:auto;padding:3px 6px;}
+
+.midArea .wideItem.profiles li .infoText h2 label {width:100%;float:left;clear:both;}
+
+.priceSlideVal .items input[type="text"] {width:70px;}
+
+.ShortcutWr {overflow:hidden;}
+.ShortcutWr ul {float:left;}
+.ShortcutWr ul li ins {top:5px;}
+
+.grey-btn {height:auto;min-height:inherit;padding:4px 9px 0;}
+.grey-btn i {margin:1px 0 0 0;}
+.grey-btn.back i {margin:1px 0 0 0;}
+.grey-btn span {height:auto;}
+
+.added {height:auto;padding: 10px 36px 8px 9px;}
+.added ins {top:2px;height:24px;}
+.searchFilterWr .btn-submit {height:auto;padding: 8px 0;}
+
+.wideItem li .infoText {overflow:auto;margin:0 0 0 219px;}
+.midArea .wideItem.profiles li .infoText h2 label {display:block;width:800px;height:20px;}
+.midArea .wideItem.profiles li .infoText {width:800px;}
+.midArea .wideItem li .infoText p.overflow {width:800px;height:57px;text-overflow:ellipsis;}
+.editPrifileWr .btn {height:auto;padding:10px 0 6px;}
+.wideItem.category .infoText .headerTwo a {overflow:hidden;float:left;height:15px;}
+.wideItem li .infoText p {float:left;}
+
+
+/*Footer*/
+.imgSlider ul li {margin: 0 4px 20px 0;}
+.footerMenuWrap {overflow:hidden;}
+.footerMenuWrap ul {float:left;}
+.footerMenuWrap ul li .more i {top:2px;}
+.footerNewsWrap {overflow:hidden;} 
+.footerNewsWrap ul {float:left;}
+
+.fancybox-overlay {z-index:10000000 !important;}
+
+
+
